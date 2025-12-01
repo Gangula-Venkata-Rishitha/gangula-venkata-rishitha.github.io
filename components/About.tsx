@@ -1,22 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Upload } from "lucide-react";
+import { PERSONAL_INFO } from "../constants";
 
 const About: React.FC = () => {
-  // State to handle image upload preview
-  const [image, setImage] = useState("https://picsum.photos/id/64/800/800"); 
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImage(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   return (
     <section id="about" className="py-16 sm:py-24 md:py-32 bg-gray-50/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
@@ -29,20 +15,15 @@ const About: React.FC = () => {
             className="flex-1 flex justify-center w-full"
         >
           <div className="relative group w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white">
-            <img src={image} alt="Profile" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            
-            {/* Overlay for upload */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center cursor-pointer backdrop-blur-sm">
-              <Upload className="w-10 h-10 text-white mb-2" />
-              <span className="text-white font-medium text-lg">Upload Photo</span>
-              <p className="text-white/70 text-sm mt-1">Click to change</p>
-              <input 
-                type="file" 
-                accept="image/*" 
-                className="absolute inset-0 opacity-0 cursor-pointer"
-                onChange={handleImageUpload}
-              />
-            </div>
+            <img 
+              src="/WhatsApp Image 2025-12-01 at 7.15.04 PM (1).jpeg" 
+              alt={PERSONAL_INFO.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              onError={(e) => {
+                // Fallback to placeholder if image not found
+                (e.target as HTMLImageElement).src = "https://picsum.photos/id/64/400/400";
+              }}
+            />
           </div>
         </motion.div>
 
