@@ -63,7 +63,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`block group relative overflow-hidden rounded-2xl border-2 ${colors.border} ${colors.hover} bg-white transition-all duration-300 shadow-sm hover:shadow-xl`}
+      className={`block group relative overflow-hidden rounded-xl sm:rounded-2xl border-2 ${colors.border} ${colors.hover} bg-white transition-all duration-300 shadow-sm hover:shadow-xl`}
     >
       {/* Animated background gradient */}
       <motion.div
@@ -73,7 +73,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
       />
 
       {/* Content */}
-      <div className="relative p-8 md:p-10">
+      <div className="relative p-6 sm:p-8 md:p-10">
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="flex items-center gap-3">
             <motion.div
@@ -94,11 +94,11 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
           </motion.div>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-gray-800 transition-colors">
           {project.title}
         </h3>
 
-        <p className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">
+        <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base md:text-lg">
           {project.description}
         </p>
 
@@ -139,18 +139,18 @@ const Projects: React.FC = () => {
   ] as const;
 
   return (
-    <section id="projects" className="bg-white py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="projects" className="bg-white py-16 sm:py-24 md:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 mb-4 sm:mb-6">
             Projects & Experience
           </h2>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto px-4">
             A collection of my work, internships, and creative solutions
           </p>
         </motion.div>
@@ -161,13 +161,13 @@ const Projects: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4"
         >
           {filterButtons.map((btn) => (
             <button
               key={btn.id}
               onClick={() => setFilter(btn.id)}
-              className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-xs sm:text-sm transition-all duration-300 ${
                 filter === btn.id
                   ? "bg-black text-white shadow-lg scale-105"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -179,7 +179,7 @@ const Projects: React.FC = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

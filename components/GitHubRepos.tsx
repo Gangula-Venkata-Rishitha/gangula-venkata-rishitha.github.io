@@ -60,21 +60,21 @@ const GitHubRepos: React.FC = () => {
   }
 
   return (
-    <section id="github" className="bg-white py-32 overflow-hidden border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="github" className="bg-white py-16 sm:py-24 md:py-32 overflow-hidden border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Github className="w-8 h-8 text-gray-900" />
-            <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-gray-900">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+            <Github className="w-6 h-6 sm:w-8 sm:h-8 text-gray-900" />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900">
               GitHub Repositories
             </h2>
           </div>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-4">
+          <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-4 px-4">
             My latest projects and contributions on GitHub
           </p>
           <a

@@ -66,9 +66,9 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="py-32 bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row gap-16 md:gap-24">
+    <footer id="contact" className="py-16 sm:py-24 md:py-32 bg-gray-50 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row gap-12 sm:gap-16 md:gap-24">
           
           {/* Left Side: Contact Info & Title */}
           <div className="flex-1 text-center md:text-left">
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-4 sm:mb-6"
             >
               Let’s build something great.
             </motion.h2>
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-gray-500 mb-12 max-w-lg mx-auto md:mx-0"
+              className="text-lg sm:text-xl text-gray-500 mb-8 sm:mb-12 max-w-lg mx-auto md:mx-0"
             >
               Have a project in mind or want to discuss the latest in AI? I'd love to hear from you.
             </motion.p>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
                transition={{ delay: 0.3 }}
-               className="flex justify-center md:justify-start space-x-8 mb-16 md:mb-0"
+               className="flex justify-center md:justify-start space-x-6 sm:space-x-8 mb-12 sm:mb-16 md:mb-0"
             >
               <a
                 href={PERSONAL_INFO.github}

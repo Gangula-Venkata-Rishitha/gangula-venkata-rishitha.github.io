@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8 flex justify-center"
         >
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-gray-100 ring-4 ring-gray-50">
+          <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-gray-100 ring-4 ring-gray-50">
             <img 
               src="/WhatsApp Image 2025-12-01 at 7.15.04 PM (1).jpeg" 
               alt={PERSONAL_INFO.name}
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-5xl md:text-8xl font-semibold tracking-tighter text-black mb-6"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter text-black mb-4 sm:mb-6 px-2"
           >
             {PERSONAL_INFO.name}
           </motion.h1>
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="text-xl md:text-3xl text-gray-500 font-medium tracking-tight max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-500 font-medium tracking-tight max-w-2xl mx-auto leading-relaxed px-4"
           >
             Computer Science Engineer <br className="md:hidden" />
             <span className="hidden md:inline mx-2">·</span>
@@ -60,9 +60,9 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.8 }}
-              className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4"
           >
-              <span className="inline-block px-4 py-1.5 rounded-full border border-gray-200 text-sm font-medium text-gray-500 backdrop-blur-sm">
+              <span className="inline-block px-4 py-1.5 rounded-full border border-gray-200 text-xs sm:text-sm font-medium text-gray-500 backdrop-blur-sm whitespace-nowrap">
                   Available for Summer 2026
               </span>
               <motion.a
@@ -73,9 +73,9 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.5, delay: 1 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap"
               >
-                <Download className="w-4 h-4" />
+                <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 Download Resume
               </motion.a>
           </motion.div>

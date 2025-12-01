@@ -18,8 +18,8 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="py-32 bg-gray-50/50">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+    <section id="about" className="py-16 sm:py-24 md:py-32 bg-gray-50/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
         {/* Image Section */}
         <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -28,7 +28,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 flex justify-center w-full"
         >
-          <div className="relative group w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+          <div className="relative group w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white">
             <img src={image} alt="Profile" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             
             {/* Overlay for upload */}
@@ -54,10 +54,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1 space-y-8 text-center md:text-left"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-gray-900">
             About Me.
           </h2>
-          <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed font-medium">
             <p>
               I am Gangula Venkata Rishitha, a Computer Science Engineering student at JNTUA College of Engineering, expected to graduate in 2026.
             </p>

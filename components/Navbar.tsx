@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
         <a href="#" className="text-xl font-semibold tracking-tight z-50">
           Rishitha<span className="text-gray-400">.</span>
         </a>
